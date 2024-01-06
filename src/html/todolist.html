@@ -12,10 +12,9 @@
     <link rel="stylesheet" href="../assets/css/styles.min.css" />
     <script src="../assets/libs/jquery/dist/jquery.min.js"></script>
     <script src="../assets/libs/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="../assets/js/sidebarmenu.js"></script>
     <script src="../assets/js/app.min.js"></script>
-    <script src="../assets/libs/apexcharts/dist/apexcharts.min.js"></script>
-    <script src="../assets/libs/simplebar/dist/simplebar.js"></script>
+    <script src="../assets/js/dashboard.js"></script>
+    <script src="todolist.js"></script>
   </head>
 
   <body>
@@ -219,95 +218,31 @@
         </header>
         <div class="container-fluid">
           <div class="row">
+            <div class="col-2"></div>
             <div class="col">
               <div class="card">
                 <div class="card-body">
-                  <div class="datagrid">
-                    <div class="datagrid-item">
-                      <div class="datagrid-title">Registrar</div>
-                      <div class="datagrid-content">Third Party</div>
-                    </div>
-                    <div class="datagrid-item">
-                      <div class="datagrid-title">Nameservers</div>
-                      <div class="datagrid-content">Third Party</div>
-                    </div>
-                    <div class="datagrid-item">
-                      <div class="datagrid-title">Port number</div>
-                      <div class="datagrid-content">3306</div>
-                    </div>
-                    <div class="datagrid-item ">
-                      <div class="datagrid-title">Expiration date</div>
-                      <div class="datagrid-content">–</div>
-                    </div>
-                    <div class="datagrid-item">
-                      <div class="datagrid-title">Creator</div>
-                      <div class="datagrid-content">
-                        <div class="d-flex align-items-center">
-                          <span class="avatar avatar-xs me-2 rounded" style="background-image: url(...)"></span>
-                          Paweł Kuna
-                        </div>
+                  <h2 class="mb-4 text-center">Twoja lista zadań</h2>
+                  <div class="container my-5">
+                    <form id="taskForm" class="mb-3">
+                      <div class="input-group">
+                        <input 
+                        type="text" 
+                        id="taskInput" 
+                        class="form-control" 
+                        placeholder="Wpisz zadanie" 
+                        oninvalid="this.setCustomValidity('Wpisz nowe zadanie')"
+                        required>
+                        <button type="submit" class="btn btn-primary">Dodaj</button>
                       </div>
-                    </div>
-                    <div class="datagrid-item">
-                      <div class="datagrid-title">Age</div>
-                      <div class="datagrid-content">15 days</div>
-                    </div>
-                    <div class="datagrid-item">
-                      <div class="datagrid-title">Edge network</div>
-                      <div class="datagrid-content">
-                        <span class="status status-green">
-                          Active
-                        </span>
-                      </div>
-                    </div>
-                    <div class="datagrid-item">
-                      <div class="datagrid-title">Avatars list</div>
-                      <div class="datagrid-content">
-                        <div class="avatar-list avatar-list-stacked">
-                          <span class="avatar avatar-xs rounded" style="background-image: url(...)"></span>
-                          <span class="avatar avatar-xs rounded">JL</span>
-                          <span class="avatar avatar-xs rounded" style="background-image: url(...)"></span>
-                          <span class="avatar avatar-xs rounded" style="background-image: url(...)"></span>
-                          <span class="avatar avatar-xs rounded" style="background-image: url(...)"></span>
-                          <span class="avatar avatar-xs rounded">+3</span>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="datagrid-item">
-                      <div class="datagrid-title">Checkbox</div>
-                      <div class="datagrid-content">
-                        <label class="form-check">
-                          <input class="form-check-input" type="checkbox" checked />
-                          <span class="form-check-label">Click me</span>
-                        </label>
-                      </div>
-                    </div>
-                    <div class="datagrid-item">
-                      <div class="datagrid-title">Icon</div>
-                      <div class="datagrid-content">
-                        <svg xmlns="http://www.w3.org/2000/svg" class="icon text-green" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
-                          <path stroke="none" d="M0 0h24v24H0z" fill="none" />
-                          <path d="M5 12l5 5l10 -10" />
-                        </svg>
-                        Checked
-                      </div>
-                    </div>
-                    <div class="datagrid-item">
-                      <div class="datagrid-title">Form control</div>
-                      <div class="datagrid-content">
-                        <input type="text" class="form-control form-control-flush" placeholder="Input placeholder" />
-                      </div>
-                    </div>
-                    <div class="datagrid-item">
-                      <div class="datagrid-title">Longer description</div>
-                      <div class="datagrid-content">
-                        Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                      </div>
-                    </div>
-                  </div>
+                      </form> 
+                      <ul id="taskList" class="list-group">
+                      </ul>
+                  </div>  
                 </div>
               </div>
             </div>
+            <div class="col-2"></div>
           </div>
         </div>
   </body>

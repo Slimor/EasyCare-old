@@ -2,6 +2,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@200;300;400;500;600;700;800&display=swap");
 @import "../libs/simplebar/dist/simplebar.css";
 @import "../css/icons/tabler-icons/tabler-icons.css";
+@import "../css/list.css";
 :root,
 [data-bs-theme="light"] {
   --bs-blue: #26c485;
@@ -211,7 +212,6 @@
     scroll-behavior: smooth;
   }
 }
-
 
 body {
   margin: 0;
@@ -16765,10 +16765,25 @@ a {
 a:hover {
   color: #26c485;
 }
-ul {
+ul li {
   list-style: none;
-  padding-left: 0;
+  padding-left: 12px 8px 12px 50px;
+  user-select: none;
+  cursor: pointer;
+  position: relative;
 }
+
+ul li::before {
+  content: "";
+  position: absolute;
+  border-radius: 50%;
+  background-image: url(../images/logos/circle.png);
+  background-size: cover;
+  background-position: center;
+  top: 12px;
+  left: 8px;
+}
+
 :focus {
   outline: 0;
   -webkit-box-shadow: none !important;
