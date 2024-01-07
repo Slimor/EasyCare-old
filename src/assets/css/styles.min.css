@@ -29,7 +29,7 @@
   --bs-gray-800: #343a40;
   --bs-gray-900: #212529;
   --bs-primary: #26c485;
-  --bs-secondary: #49beff;
+  --bs-secondary: #495057;
   --bs-success: #13deb9;
   --bs-info: #539bff;
   --bs-warning: #ffae1f;
@@ -10402,7 +10402,6 @@ fieldset:disabled .btn {
 }
 .text-secondary {
   --bs-text-opacity: 1;
-  color: rgba(var(--bs-secondary-rgb), var(--bs-text-opacity)) !important;
 }
 .text-success {
   --bs-text-opacity: 1;
@@ -16800,7 +16799,7 @@ ul li::before {
   object-fit: cover;
 }
 .card-title {
-  font-size: 18px;
+  font-size: 24px;
 }
 .card-subtitle {
   font-size: 14px;
